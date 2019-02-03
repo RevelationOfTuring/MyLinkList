@@ -36,7 +36,10 @@ func main() {
 	//myLink.InsertByPos(s6,0)
 	//myLink.Print()
 	//fmt.Println(myLink.GetLen())
-	myLink.DeleteByValue(s2)
+	//myLink.DeleteByValue(s2)
+	//myLink.Print()
+	//fmt.Println(myLink.GetLen())
+	myLink.DeleteByPos(6)
 	myLink.Print()
 	fmt.Println(myLink.GetLen())
 

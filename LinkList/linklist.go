@@ -126,3 +126,21 @@ func (l*LinkList)DeleteByValue(data interface{}){
 		}
 	}
 }
+
+func (l*LinkList)DeleteByPos(pos int){
+	if l==nil{
+		return
+	}
+	if pos<1{
+		pos=1
+	}
+	if pos>l.len{
+		pos=l.len
+	}
+	pCur:=l.Header
+	for i:=1;i<=pos-1;i++{
+		pCur=pCur.Next
+	}
+	pCur.Next=pCur.Next.Next
+	l.len--
+}
